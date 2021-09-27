@@ -4,7 +4,7 @@ flex-direction: column;
 max-width: 400px;
 position: absolute;
 top: 180px;
-left: 25%;
+left: 22%;
 background-color: #ffffff;
 padding: 10px;
 border-radius: 10px;
@@ -14,6 +14,16 @@ border-radius: 10px;
   margin-top: 30px;
   display: flex;
   justify-content: flex-end;
+}
+
+.triangleTop {
+  transform: translateX(180px) translateY(-20px);
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent #ffffff transparent;
 }
 
 input[type=range] {

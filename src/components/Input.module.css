@@ -29,6 +29,7 @@ border-right: 1px solid black;
 .inputText {
   border: none;
   width: 200px;
+  text-align: center;
 }
 
 .selectDiv {
@@ -37,5 +38,24 @@ border-right: 1px solid black;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.triangleBottom {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 12px 10px 0 10px;
+  border-color: #000000 transparent transparent transparent;
+}
+
+.triangleBottomAct {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 12px 10px 0 10px;
+  border-color: #000000 transparent transparent transparent;
+  transform: rotate(180deg);
 }
 
