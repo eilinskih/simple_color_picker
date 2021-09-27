@@ -1,29 +1,37 @@
-.input-container {
+body {
+  background-color: antiquewhite;
+}
+
+.inputContainer {
   display: flex;
   border: 1px solid black;
   align-items: center;
   justify-content: flex-end;
   max-width: 400px;
   border-radius: 10px;
+  position: fixed;
+  top: 100px;
+  left: 20%;
+  background-color: #ffffff;
 }
 
-.color-container {
+.colorContainer {
 border-left: 1px solid black;
 border-right: 1px solid black;
 }
 
-.color-div {
+.colorDiv {
   width: 30px;
   height: 30px;
   margin: 15px;
 }
 
-input {
+.inputText {
   border: none;
   width: 200px;
 }
 
-.select-div {
+.selectDiv {
   width: 60px;
   height: 60px;
   display: flex;
