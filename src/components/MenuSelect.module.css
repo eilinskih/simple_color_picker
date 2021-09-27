@@ -1,0 +1,57 @@
+.container {
+  display: flex;  
+  flex-direction: column;
+  max-width: 400px;
+  position: absolute;
+  top: 180px;
+  left: 30%;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  }
+
+.colorItem {
+    width: 100px;
+    padding: 10px 5px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .colorItem:nth-child(n+3) {
+    border-top: 1px solid blue;
+}
+
+.triangleTop {
+    transform: translateX(80px) translateY(-20px);
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #ffffff transparent;
+}
+
+.red {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+  }
+
+.yellow {
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+}
+
+.green {
+    width: 20px;
+    height: 20px;
+    background-color: green;
+}
+
+.blue {
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+}
