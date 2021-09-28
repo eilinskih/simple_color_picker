@@ -31,8 +31,8 @@ function MenuRGB(props: PropsType) {
 
     const onCancelClick = () => {
         props.onColorChange(props.color);
-        props.setActive(false);
-        props.changeHexValue(rgb2hex(props.color));
+        props.changeHexValue(props.color);
+        props.setActive(false);  
     };
 
     const onSaveClick = () => {
