@@ -5,14 +5,16 @@ type PropsType = {
     onColorChange: Function
     setColor: Function
     setActive: Function
+    changeHexValue: Function
 }
 
 function MenuSelect(props: PropsType) {
 
     const commonClick: (color: string) => void = (color) => {
-        props.onColorChange(color)
-        props.setColor(color)
-        props.setActive(false)
+        props.onColorChange(color);
+        props.changeHexValue(color);
+        props.setColor(color);
+        props.setActive(false);
     };
 
     const onRedClick = () => {
@@ -28,7 +30,7 @@ function MenuSelect(props: PropsType) {
     };
 
     const onBlueClick = () => {
-        commonClick("0000ff")
+        commonClick("#3200ff")
     };
     return (
         <>

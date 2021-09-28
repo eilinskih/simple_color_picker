@@ -47,7 +47,7 @@ function Input() {
             </div>
 
             {isRgbActive ? <MenuRGB changeHexValue={changeHexValue} setColor={setColor} color={color} setActive={setIsRgbActive} onColorChange={onColorChange} /> : null}
-            {isSelectActive ? <MenuSelect onColorChange={onColorChange} setColor={setColor} setActive={setIsSelectActive} /> : null}
+            {isSelectActive ? <MenuSelect changeHexValue={changeHexValue} onColorChange={onColorChange} setColor={setColor} setActive={setIsSelectActive} /> : null}
         </>
     )
 };
