@@ -1,13 +1,21 @@
 import React, { useState } from "react";
 import r from './MenuRGB.module.css';
 
-function MenuRGB(props) {
-    let redRef = React.createRef();
-    let greenRef = React.createRef();
-    let blueRef = React.createRef();
-    let [colorRange, setColorRange] = useState(props.color)
+type PropsType = {
+    onColorChange: Function
+    setColor: Function
+    setActive: Function
+    color: string
+    changeHexValue: Function
+};
 
-    const rgb2hex = (col) => {
+function MenuRGB(props: PropsType) {
+    let redRef: any = React.createRef();
+    let greenRef: any = React.createRef();
+    let blueRef: any = React.createRef();
+    let [colorRange, setColorRange] = useState(props.color);
+
+    const rgb2hex: (col: string) => string = (col) => {
         let rgb = col.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i);
         return (rgb && rgb.length === 4) ? "#" +
             ("0" + parseInt(rgb[1], 10).toString(16)).slice(-2) +
@@ -18,16 +26,20 @@ function MenuRGB(props) {
     const onRangeChange = () => {
         props.onColorChange(`rgb(${redRef.current.value}, ${greenRef.current.value}, ${blueRef.current.value})`);
         setColorRange(`rgb(${redRef.current.value}, ${greenRef.current.value}, ${blueRef.current.value})`);
-    }
+        props.changeHexValue(rgb2hex(`rgb(${redRef.current.value}, ${greenRef.current.value}, ${blueRef.current.value})`));
+    };
+
     const onCancelClick = () => {
-        props.onColorChange(props.color)
-        props.setActive(false)
-    }
+        props.onColorChange(props.color);
+        props.setActive(false);
+        props.changeHexValue(rgb2hex(props.color));
+    };
 
     const onSaveClick = () => {
-        props.onColorChange(colorRange)
-        props.setColor(rgb2hex(colorRange))
-        props.setActive(false)
+        props.onColorChange(colorRange);
+        props.setColor(rgb2hex(colorRange));
+        props.setActive(false);
+        props.changeHexValue(rgb2hex(`rgb(${redRef.current.value}, ${greenRef.current.value}, ${blueRef.current.value})`));
     }
 
     return (
@@ -58,6 +70,6 @@ function MenuRGB(props) {
             </div>
         </>
     )
-}
+};
 
 export default MenuRGB;
