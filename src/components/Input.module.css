@@ -24,6 +24,7 @@ border-right: 1px solid black;
   width: 30px;
   height: 30px;
   margin: 15px;
+  cursor: pointer;
 }
 
 .inputText {
@@ -47,6 +48,7 @@ border-right: 1px solid black;
   border-style: solid;
   border-width: 12px 10px 0 10px;
   border-color: #000000 transparent transparent transparent;
+  cursor: pointer;
 }
 
 .triangleBottomAct {
@@ -57,5 +59,7 @@ border-right: 1px solid black;
   border-width: 12px 10px 0 10px;
   border-color: #000000 transparent transparent transparent;
   transform: rotate(180deg);
+  cursor: pointer;
+
 }
 

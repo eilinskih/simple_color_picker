@@ -1,8 +1,15 @@
+import React from 'react';
 import s from './MenuSelect.module.css';
+ 
+type PropsType = {
+    onColorChange: Function
+    setColor: Function
+    setActive: Function
+}
 
-function MenuSelect(props) {
+function MenuSelect(props: PropsType) {
 
-    const commonClick = (color) => {
+    const commonClick: (color: string) => void = (color) => {
         props.onColorChange(color)
         props.setColor(color)
         props.setActive(false)
